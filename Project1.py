@@ -1,3 +1,6 @@
+
+// ========TO DO LIST PROJECT========
+
 def display_menu():
     print("\n" + "=" * 40)
     print("         TO-DO LIST APPLICATION")
@@ -13,7 +16,7 @@ def add_task(tasks):
     task = input("Enter a task: ").strip()
     if task:
         tasks.append(task)
-        print(f"✅ Task '{task}' added successfully.")
+        print(f" Task '{task}' added successfully.")
     else:
         print("❌ Task cannot be empty.")
 
@@ -35,11 +38,11 @@ def delete_task(tasks):
         choice = int(input("\nEnter task number to delete: "))
         if 1 <= choice <= len(tasks):
             removed = tasks.pop(choice - 1)
-            print(f"🗑️ Task '{removed}' deleted.")
+            print(f" Task '{removed}' deleted.")
         else:
-            print("❌ Invalid task number.")
+            print("Invalid task number.")
     except ValueError:
-        print("❌ Please enter a valid number.")
+        print("Please enter a valid number.")
 
 
 def main():
@@ -56,10 +59,10 @@ def main():
             delete_task(tasks)
         elif choice == "4":
             print("\nThank you for using the To-Do List App.")
-            print("Goodbye! 👋")
+            print("Goodbye!")
             break
         else:
-            print("❌ Invalid choice. Please try again.")
+            print("Invalid choice. Please try again.")
 
 
 if __name__ == "__main__":
